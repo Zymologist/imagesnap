@@ -259,10 +259,10 @@ NSString *const VERSION = @"0.2.14";
 
 - (NSString *)fileNameWithSequenceNumber:(unsigned long)sequenceNumber {
     
-    //    NSDate *now = [NSDate date];
-    //    NSString *nowstr = [self.dateFormatter stringFromDate:now];
-    //    return [NSString stringWithFormat:@"snapshot-%05lu-%s.jpg", sequenceNumber, nowstr.UTF8String];
-    return [NSString stringWithFormat:@"snapshot-%05lu.jpg", sequenceNumber];
+    NSDate *now = [NSDate date];
+    NSString *nowstr = [self.dateFormatter stringFromDate:now];
+    return [NSString stringWithFormat:@"snapshot-%05lu-%s.jpg", sequenceNumber, nowstr.UTF8String];
+    //    return [NSString stringWithFormat:@"snapshot-%05lu.jpg", sequenceNumber];
 }
 
 @end
